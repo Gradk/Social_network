@@ -1,0 +1,24 @@
+{
+  "name": "mern",
+  "version": "1.0.0",
+  "description": "Mern stack",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js"
+  },
+  "keywords": [
+    "mern"
+  ],
+  "author": "Grad Konstantin",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "config": "^3.3.6",
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "mongoose": "^5.12.10",
+    "morgan": "^1.10.0"
+  }
+}
