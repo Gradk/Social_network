@@ -86,8 +86,8 @@ router.get("/timeline/all", async (req, res) => {
       const userPosts = await Post.find({ userId: currentUser._id }); // из модели поста ищем айди автора поста (в каждом посте указываем userId), 
                                                                     //которые совпадаю с юзером в теле запроса
       const friendPosts = await Promise.all(
-        currentUser.followings.map((friendId) => { //массив подписчиков записываем в новый массив friendmap
-          return Post.find({ userId: friendId }); //перебираем каждое значение и при совпадении запишем в массив friendPost
+        currentUser.followings.map((friendId) => { //каждого подписчика перебираем и записываем в map
+          return Post.find({ userId: friendId }); 
         })
       );
       res.json(userPosts.concat(...friendPosts)) //объединяем массив постов подписчиков(fiendId) и friendPost
